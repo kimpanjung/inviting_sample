@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>판중❣️소담 결혼식에 초대합니다</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@heroicons/react@2.0.13/24/outline/index.js" defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WTZS58B02C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-WTZS58B02C');
+    </script>
+
+    <!-- Swiper CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&family=Noto+Sans+KR:wght@300;400&display=swap'); */
+
+        @font-face {
+            font-family: 'Sungsil';
+            src: url('ChosunCentennial_ttf.ttf') format('truetype');
+            /* mail.html과 같은 경로에 있을 경우 상대 경로로 지정 */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h1, h2 {
+            font-family: 'Sungsil', sans-serif;
+            /* font-family: 'MN'; */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            background: url('background_4.jpeg');
+            /* font-family: 'MN'; */
+            /* src: url('mn.ttf') format('truetype'); mail.html과 같은 경로에 있을 경우 상대 경로로 지정 */
+            font-family: 'Sungsil', serif;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .styled-text {
+            position: relative;
+            display: inline-block;
+        }
+
+        .styled-text::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            /* 텍스트 바로 아래 */
+            left: 0;
+            width: 100%;
+            height: 10px;
+            /* 밑줄 두께 */
+            z-index: -1;
+            /* 텍스트 위로 올라오지 않도록 */
+            border-radius: 5px;
+            /* 부드러운 끝 처리 */
+
+            /* 파스텔 하늘색 + 색연필 느낌 */
+            background: repeating-linear-gradient(-45deg,
+                    rgba(173, 216, 230, 0.8) 0%,
+                    /* 연한 하늘색 */
+                    rgba(173, 216, 230, 0.6) 3px,
+                    /* 약간 진한 하늘색 */
+                    rgba(173, 216, 230, 0.8) 6px);
+        }
+
+        /* 분홍색 스타일 */
+        .styled-text-pink {
+            position: relative;
+            display: inline-block;
+        }
+
+        .styled-text-pink::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            /* 밑줄 두께 */
+            z-index: -1;
+            border-radius: 5px;
+            background: repeating-linear-gradient(-45deg,
+                    rgba(255, 182, 193, 0.8) 0%,
+                    /* 연한 핑크색 */
+                    rgba(255, 105, 180, 0.6) 3px,
+                    /* 약간 더 진한 핑크 */
+                    rgba(255, 182, 193, 0.8) 6px);
+        }
+
+        .styled-text-1 {
+            text-shadow: 1px 1px 2px rgba(255, 182, 193, 0.6), -1px -1px 2px rgba(255, 182, 193, 0.6), 1px -1px 2px rgba(255, 182, 193, 0.6), -1px 1px 2px rgba(255, 182, 193, 0.6);
+            color: #000;
+            /* 글자 색상은 그대로 */
+        }
+
+        .styled-text-2 {
+            text-shadow: 1px 1px 2px rgba(173, 216, 230, 0.6), -1px -1px 2px rgba(173, 216, 230, 0.6), 1px -1px 2px rgba(173, 216, 230, 0.6), -1px 1px 2px rgba(173, 216, 230, 0.6);
+            color: #000;
+            /* 글자 색상은 그대로 */
+        }
+
+        /* 특정 이미지 기본 상태: 투명 */
+        #uniqueImage {
+            opacity: 0;
+            /* 기본 투명도 */
+            transition: opacity 0.5s ease-in-out;
+            /* 부드러운 애니메이션 */
+            cursor: pointer;
+            /* 클릭 가능하게 커서 표시 */
+        }
+
+        /* 활성화 상태: 불투명 */
+        #uniqueImage.visible {
+            opacity: 1;
+        }
+
+        .swiper-container {
+            position: static;
+            overflow: hidden;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body class="text-gray-800">
+    <!-- Section 1 -->
+    <section class="items-center justify-center ">
+        <div class="text-center p-6">
+            <div class="mt-6 w-16 h-[1px] bg-gray-400 mx-auto"></div>
+
+            <h1 class="mt-6 text-4xl font-bold text-gray-700 tracking-wider"> 김판중 ᐧ 강소담</h1>
+            <p class="mt-3 text-gray-500 text-lg">서로 다른 길을 걸어왔지만 같은 곳에서 끝맺는 사랑으로
+                서로를 지키며 살아가겠습니다</p>
+
+            <div class="mt-8">
+                <!-- <img src="DSC03619.JPG" alt="웨딩 이미지" class="w-full max-w-md mx-auto rounded-lg shadow-lg"
+                    loading="lazy"> -->
+            </div>
+
+
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- 슬라이드 1 -->
+                    <div class="swiper-slide">
+                        <img src="bemy_4.jpeg" class="w-full max-w-md mx-auto rounded-lg shadow-lg" alt="이미지 1" class="w-full h-auto rounded-lg">
+                    </div>
+
+                    <!-- 슬라이드 8 -->
+                    <div class="swiper-slide">
+                        <img src="008.JPG" class="w-full max-w-md mx-auto rounded-lg shadow-lg" alt="이미지 3" class="w-full h-auto rounded-lg">
+                    </div>
+
+                    <!-- 슬라이드 6 -->
+                    <div class="swiper-slide">
+                        <img src="IMG_6976.JPG" class="w-full max-w-md mx-auto rounded-lg shadow-lg" alt="이미지 3" class="w-full h-auto rounded-lg">
+                    </div>
+
+                    <!-- 슬라이드 3 -->
+                    <div class="swiper-slide">
+                        <img src="bemy_2.jpeg" class="w-full max-w-md mx-auto rounded-lg shadow-lg" alt="이미지 2" class="w-full h-auto rounded-lg">
+                    </div>
+
+                     <!-- 슬라이드 4 -->
+                     <div class="swiper-slide">
+                        <img src="DSC03834.jpg" class="w-full max-w-md mx-auto rounded-lg shadow-lg" alt="이미지 2" class="w-full h-auto rounded-lg">
+                    </div>
+
+                    <!-- 슬라이드 5 -->
+                    <div class="swiper-slide">
+                        <img src="bemy_1.jpeg" class="w-full max-w-md mx-auto rounded-lg shadow-lg" alt="이미지 3" class="w-full h-auto rounded-lg">
+                    </div>
+
+                    <!-- 슬라이드 2 -->
+                    <div class="swiper-slide">
+                        <img src="DSC03812.jpg" class="w-full max-w-md mx-auto rounded-lg shadow-lg" alt="이미지 2" class="w-full h-auto rounded-lg">
+                    </div>
+
+                    <!-- 슬라이드 7 -->
+                    <div class="swiper-slide">
+                        <img src="bemy_3.jpeg" class="w-full max-w-md mx-auto rounded-lg shadow-lg" alt="이미지 3" class="w-full h-auto rounded-lg">
+                    </div>
+
+                    <!-- 슬라이드 9 -->
+                    <div class="swiper-slide">
+                        <img src="009.JPG" class="w-full max-w-md mx-auto rounded-lg shadow-lg" alt="이미지 3" class="w-full h-auto rounded-lg">
+                    </div>
+
+
+                    <div class="swiper-pagination"></div>
+                </div>
+                <!-- 네비게이션 버튼 -->
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
+                <!-- 페이지네이션 -->
+            </div>
+
+
+            <div class="mt-6 w-16 h-[1px] bg-gray-400 mx-auto"></div>
+            <h2 class="mt-10 text-2xl md:text-3xl font-bold text-gray-700">늘 곁에서 아껴준 <br> 고마운 분들을 초대합니다</h2>
+
+        
+            <p class="mt-6 text-lg text-gray-600">
+                <b class="styled-text-pink">피로연</b> 
+                <br> 2025년 2월 
+                <span class="styled-text-1 text-red-500">23일 일요일</span>,
+                <br>
+            <p class="styled-text-1">오전 11:00 ~ 오후 5:00</p>
+            </p>
+            <p class="text-lg text-gray-700">제주 아스타호텔 3층 코스모스홀</p> <!-- 장소 아이콘 넣기-->
+
+            
+        
+
+        <!-- 피로연 안내 -->
+        <p class="mt-4 text-lg text-gray-600 text-center">
+            <span class="text-pink-500 font-semibold">제주 피로연</span>에서 따뜻한 만남을 기다리고 있습니다. 🏝️<br>
+        </p>
+
+        <!-- 기존 본식 정보 (회색 처리) -->
+        <p class="mt-4 text-lg text-gray-400 cursor-not-allowed text-center">
+            <b class="styled-text">본식 (종료)</b> 
+            <br>  2025년 2월 
+            <span class="styled-text-2 text-gray-500">15일 토요일</span>,
+            <br>
+            <p class="styled-text-2 text-gray-500">오후 12:00</p>
+        </p>
+        <p class="text-lg text-gray-400 text-center cursor-not-allowed">
+            전주 알펜시아 웨딩홀 1층 마리아주홀
+        </p> <!-- 장소 아이콘 넣기-->
+        <p class="mt-2 text-xl text-gray-500 text-center">
+            함께해 주신 모든 분들께 진심으로 감사드립니다. 💖
+        </p>
+
+        </div>
+    </section>
+
+    <!-- Section 2 : 모시는 글 -->
+    <section class="items-center justify-center ">
+        <div class="text-center p-6 ">
+            <h2 class="text-2xl font-bold text-gray-700">오래도록 고맙도록</h2>
+            <p class="mt-4 text-gray-600 leading-relaxed">
+                날마다 변해가는 시간 속에서,<Br> 아주 조금씩 서로에게 물들어가던 우리.<br></p>
+            <p class="mt-3 text-gray-600 leading-relaxed">
+                늘 보고픔으로 시작된 하루가 <Br> 이제 같은 꿈을 꾸는 날들로 이어졌습니다.<br></p>
+            <p class="mt-3 text-gray-600 leading-relaxed">
+                <!-- 우리의 사랑을 기억하며 새로운 여정을 시작하려 합니다.<br> -->
+                그날의 설렘과 다짐을 함께 나누어 주시길 바랍니다.<Br>
+            </p>
+
+            <div class="mt-4 flex justify-center space-x-4">
+                <img src="드림.png" alt="PJ" class="w-32 h-auto">
+            </div>
+
+            <!-- <div class="mt-8">
+                <img src="DSC03619.JPG" alt="웨딩 이미지"
+                    class="w-full max-w-md mx-auto rounded-lg shadow-lg"
+                    style="filter: brightness(1.1) contrast(0.9); opacity: 0.9;"
+                    >
+            </div> -->
+
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- 슬라이드 1 -->
+                    <div class="swiper-slide">
+                        <img src="DSC03619.JPG" class="w-full max-w-md mx-auto rounded-lg shadow-lg" alt="이미지 1" class="w-full h-auto rounded-lg">
+                    </div>
+
+                    <!-- 슬라이드 2 -->
+                    <div class="swiper-slide">
+                        <img src="DSC03631.jpg" class="w-full max-w-md mx-auto rounded-lg shadow-lg" alt="이미지 2" class="w-full h-auto rounded-lg">
+                    </div>
+
+                    <!-- 슬라이드 3 -->
+                    <div class="swiper-slide">
+                        <img src="DSC03644.jpg" class="w-full max-w-md mx-auto rounded-lg shadow-lg" alt="이미지 2" class="w-full h-auto rounded-lg">
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+
+                </div>
+                <!-- 네비게이션 버튼 -->
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
+                <!-- 페이지네이션 -->
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- 혼주 안내 섹션 -->
+    <section class="py-12 px-6">
+        <div class="text-center">
+            <h2 class="text-2xl font-bold text-gray-700">혼주</h2>
+            <p class="mt-4 text-gray-600 text-lg leading-relaxed">
+                김용보 · 이해자의 차남, 판중 <br>
+                강동수 · 김경숙의 장녀, 소담
+            </p>
+        </div>
+    </section>
+
+    <div class="mt-2 w-16 h-[1px] bg-gray-400 mx-auto"></div>
+
+    <!-- Section 3 : 오시는 길-->
+    <section class="py-12 px-6">
+        <div class="text-center">
+            <h2 class="text-2xl font-bold text-gray-700">오시는 길</h2>
+
+            <p class="mt-6 text-xl text-gray-600 cursor-pointer hover:text-blue-500 transition" id="copyAddress"
+                onclick="copyToClipboard2()">
+                <span class="text-pink-500">피로연</span>
+                <Br>제주 아스타호텔 <B class="styled-text-1">3층 코스모스홀</B>
+                <br>
+                <span class="text-base"> 제주 제주시 서사로 129 아스타 호텔</span>
+                <i class="fa fa-copy"></i>
+            </p>
+            <p class="mt-2">
+
+                <a href="tel:064-710-1100" class="ml-4 text-xl text-gray-600 hover:text-blue-700">
+                    <i class="fa fa-phone"></i> 064-710-1100
+                </a>
+            </p>
+
+            <hr>
+            
+
+            <!-- 본식 종료 메시지 -->
+            <p class="mt-12 text-xl text-gray-500 text-center">
+                <span class="text-blue-400">(본식이 종료되었습니다)</span><br>
+                함께해 주신 모든 분들께 진심으로 감사드립니다. 💖
+            </p>
+
+            <!-- 피로연 안내 추가 -->
+            <p class="mt-4 text-lg text-gray-600 text-center">
+                혹시 본식에 참석하지 못하셨다면,<br>
+                <span class="text-pink-500 font-semibold">제주 피로연</span>에서 뵐 수 있길 바라겠습니다! 🏝️
+            </p>
+
+
+            <div class="mt-6 py-12 px-6">
+                <h2 class="text-2xl font-bold text-black-700">연락처</h2>
+                <div class="mt-4 text-lg text-gray-600 flex justify-between items-start">
+
+                    <!-- 신랑 연락처 -->
+                    <div class="w-1/2 space-y-3"> <!-- space-y-4로 행 간격 추가 -->
+                        <div>
+                            <span class="text-blue-800 font-bold">신랑</span>
+                            <br>
+                            <span>김판중</span>
+                            <a href="tel:010-9763-1945" class="ml-2 text-gray-500 hover:text-blue-700">📞</a>
+                            <a href="sms:010-9763-1945" class="ml-2 text-gray-500 hover:text-blue-700">💬</a>
+                        </div>
+                        <div>
+                            <span>아버님</span>
+                            <a href="tel:010-4005-9340" class="ml-2 text-gray-500 hover:text-blue-700">📞</a>
+                            <a href="sms:010-4005-9340" class="ml-2 text-gray-500 hover:text-blue-700">💬</a>
+                        </div>
+                        <div>
+                            <span>어머님</span>
+                            <a href="tel:010-8458-7588" class="ml-2 text-gray-500 hover:text-blue-700">📞</a>
+                            <a href="sms:010-8458-7588" class="ml-2 text-gray-500 hover:text-blue-700">💬</a>
+                        </div>
+                    </div>
+
+                    <!-- 신부 연락처 -->
+                    <div class="w-1/2 space-y-3"> <!-- space-y-4로 행 간격 추가 -->
+                        <div>
+                            <span class="text-pink-500 font-bold">신부</span>
+                            <br>
+                            <span>강소담</span>
+                            <a href="tel:010-8458-7588" class="ml-2 text-gray-500 hover:text-blue-700">📞</a>
+                            <a href="sms:010-8458-7588" class="ml-2 text-gray-500 hover:text-blue-700">💬</a>
+                        </div>
+                        <div>
+                            <span>아버님</span>
+                            <a href="tel:010-3697-7588" class="ml-2 text-gray-500 hover:text-blue-700">📞</a>
+                            <a href="sms:010-3697-7588" class="ml-2 text-gray-500 hover:text-blue-700">💬</a>
+                        </div>
+                        <div>
+                            <span>어머님</span>
+                            <a href="tel:010-3288-7588" class="ml-2 text-gray-500 hover:text-blue-700">📞</a>
+                            <a href="sms:010-3288-7588" class="ml-2 text-gray-500 hover:text-blue-700">💬</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+
+        <div class="text-center">
+            <div class="mt-8 flex flex-col items-center space-y-4">
+                <button class="px-6 py-3 bg-gray-800 text-white rounded-lg shadow-md hover:bg-gray-700 transition"
+                    onclick="showAndScrollToSection('accountSection')">
+                    마음 전하실 곳
+                </button>
+                <button class="px-6 py-3 bg-pink-500 text-white rounded-lg shadow-md hover:bg-pink-600 transition"
+                    onclick="shareInvitation()">
+                    소식 전하기
+                </button>
+                <button class="px-6 py-3 bg-green-600 text-white rounded-lg shadow-md hover:bg-green-700 transition"
+                    onclick="sendWreath()">
+                    화환 보내기
+                </button>
+            </div>
+        </div>
+
+        <div id="accountSection" class="mt-6 hidden bg-gray-50 p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold text-gray-700">마음 전하실 곳</h2>
+            <p class="text-base"> * 계좌번호를 누르면 자동으로 복사됩니다</p>
+
+            <p class="mt-4 text-gray-600 groom-account">
+                <span class="text-blue-500">신랑측<br></span>
+                예금주 김판중
+                <span class="font-semibold text-gray-1000 cursor-pointer hover:text-blue-500"
+                    onclick="copyAccountNumber('1002-846-891184'); sendCopyEvent('신랑측', '우리은행 1002-846-891184')">
+                    우리은행 1002-846-891184
+                </span>
+            </p>
+
+
+            <p class="mt-4 text-gray-600 groom-account-comment hidden">
+                <span class="text-blue-500">신랑측<br></span>
+                <span class="text-gray-1000 cursor-pointer hover:text-blue-500">
+                    축의금 대신 신랑을 향한 따뜻한 응원과 축복만으로도 충분히 감사드립니다. <br>
+                    함께해 주시는 것만으로도 큰 기쁨이니, 마음만 전해 주시면 감사하겠습니다.
+                </span>
+            </p>
+
+
+            <p class="mt-8 text-gray-600">
+                <span class="mt-3 text-pink-500">신부측<br></span>
+                예금주 강동수
+                <span class="font-semibold cursor-pointer hover:text-pink-500"
+                    onclick="copyAccountNumber('959-02-314871'); sendCopyEvent('신부측', '농협 959-02-314871')">
+                    농협 959-02-314871
+                </span>
+            </p>
+
+            <p class="mt-3 text-gray-600">
+                예금주 김경숙
+                <span class="font-semibold cursor-pointer hover:text-green-500"
+                    onclick="copyAccountNumber('302-0452-2072-61'); sendCopyEvent('신부측', '농협 302-0452-2072-61')">
+                    농협 302-0452-2072-61
+                </span>
+            </p>
+
+            <p class="mt-3 text-gray-600">
+                예금주 강소담
+                <span class="font-semibold cursor-pointer hover:text-purple-500"
+                    onclick="copyAccountNumber('981-02-320474'); sendCopyEvent('신부측', '농협 981-02-320474')">
+                    농협 981-02-320474
+                </span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Section 4 -->
+    <footer class="py-6 bg-gray-100 text-center">
+        <p class="text-sm text-gray-500">특별한 날 함께 해주셔서 감사합니다.</p>
+        <p class="text-xs text-gray-400 mt-2">2025 김판중 💜 강소담</p>
+
+        <div class="flex justify-center items-center space-x-2">
+            <img id="uniqueImage" src="pepe3.png" alt="pepe" class="h-5 w-auto" style="margin-left: 0;" onclick="toggleImage()">
+
+            <p class="text-xs text-gray-400">&copy; Designed by</p>
+            <img src="cony.png" alt="Cony" class="h-5 w-auto" style="margin-left: 0;">
+        </div>
+
+    </footer>
+
+    <script>
+        function copyToClipboard() {
+            const address = "전북 전주시 완산구 모악로 4653 알펜시아웨딩컨벤션예식장";
+            navigator.clipboard.writeText(address).then(() => {
+                alert("결혼식장 주소가 복사되었습니다!");
+            }).catch(err => {
+                console.error("복사 실패:", err);
+                alert("복사에 실패했습니다.");
+            });
+        }
+
+        function copyToClipboard2() {
+            const address = "제주시 서사로 129";
+            navigator.clipboard.writeText(address).then(() => {
+                alert("피로연장 주소가 복사되었습니다!");
+            }).catch(err => {
+                console.error("복사 실패:", err);
+                alert("복사에 실패했습니다.");
+            });
+        }
+
+        function showAndScrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+
+            // 섹션을 표시
+            if (section.classList.contains('hidden')) {
+                section.classList.remove('hidden');
+            }
+
+            // 부드럽게 스크롤
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function copyAccountNumber(accountNumber) {
+            navigator.clipboard.writeText(accountNumber)
+                .then(() => {
+                    alert(`계좌번호 ${accountNumber}가 복사되었습니다!`);
+                })
+                .catch(err => {
+                    console.error('계좌 복사에 실패했습니다:', err);
+                });
+        }
+
+
+        function copyAccountNumber(accountNumber) {
+            navigator.clipboard.writeText(accountNumber)
+                .then(() => {
+                    alert(`계좌번호 ${accountNumber}가 복사되었습니다!`);
+                })
+                .catch(err => {
+                    console.error('계좌 복사에 실패했습니다:', err);
+                });
+        }
+
+        // GA 이벤트 전송
+        function sendCopyEvent(owner, account) {
+            gtag('event', 'copy_account', {
+                'event_category': 'Account Copy',
+                'event_label': owner, // 예: 신랑측
+                'value': account // 예: 우리은행 1002-846-891184
+            });
+            console.log(`복사 이벤트 트래킹: ${owner} - ${account}`);
+        }
+
+        // 청첩장 공유하기
+        function shareInvitation() {
+            const shareData = {
+                title: '판중이와 소담이의 결혼식에 초대합니다',
+                text: '2025년 2월 15일, 판중&소담의 결혼식에 초대합니다! 피로연은 2025년 2월 23일 제주도에서 열립니다.',
+                url: "https://kimpanjung.github.io/inviting_card/"//window.location.href
+            };
+            const fullText = `${shareData.title}\n\n${shareData.text}\n\n${shareData.url}`;
+
+
+            if (navigator.share) {
+                navigator.share(shareData).then(() => {
+                    console.log('공유 성공');
+                }).catch(err => {
+                    console.error('공유 실패:', err);
+                });
+            } else {
+                // alert('공유 기능이 지원되지 않는 브라우저입니다.');
+                // 공유 기능 미지원 브라우저
+                // 비차단 메시지를 사용자에게 보여줌
+                console.warn('공유 기능이 지원되지 않는 브라우저입니다.');
+                // displayNotification('공유 기능이 지원되지 않는 브라우저입니다. 모바일 청접장 주소를 복사합니다.');
+
+                navigator.clipboard.writeText(fullText)
+                    .then(() => {
+                        alert('모바일 청첩장의 주소가 클립보드에 복사되었습니다!');
+                        displayNotification('모바일 청첩장의 주소가 클립보드에 복사되었습니다!');
+                    })
+                    .catch(err => {
+                        console.error('주소 복사 실패:', err);
+                        displayNotification('주소 복사에 실패했습니다. 브라우저 설정을 확인해주세요.');
+                    });
+            }
+        }
+
+
+        // 알림 메시지를 표시하는 함수 (비차단 방식)
+        function displayNotification(message) {
+            const notification = document.createElement('div');
+            notification.innerText = message;
+            notification.style.position = 'fixed';
+            notification.style.bottom = '20px';
+            notification.style.left = '50%';
+            notification.style.transform = 'translateX(-50%)';
+            notification.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+            notification.style.color = 'white';
+            notification.style.padding = '10px 20px';
+            notification.style.borderRadius = '5px';
+            notification.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            notification.style.zIndex = '1000';
+            notification.style.fontSize = '14px';
+            notification.style.opacity = '1';
+            notification.style.transition = 'opacity 1s ease-out';
+
+            document.body.appendChild(notification);
+
+            // 3초 후 알림을 서서히 제거
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                setTimeout(() => {
+                    notification.remove();
+                }, 1000);
+            }, 3000);
+        }
+
+
+        function toggleImage() {
+            const img = document.getElementById('uniqueImage'); // 특정 ID의 이미지만 선택
+            img.classList.toggle('visible'); // 'visible' 클래스 추가/제거
+        }
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+        const swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            hashNavigation: false, // 해시 내비게이션 비활성화
+            
+            loop: true, // 슬라이드 반복
+            effect: 'fade',
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true, // 페이지네이션 클릭 가능
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 1500, // 3초마다 자동 슬라이드
+                disableOnInteraction: false, // 사용자가 조작해도 자동 재생 유지
+            },
+        });
+    });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        // URL에서 쿼리 문자열 가져오기
+        const urlParams = new URLSearchParams(window.location.search);
+        const hideSection = urlParams.get("hide");
+
+        // 'hide=groom'이면 신랑측 계좌번호 숨기기
+        if (hideSection === "groom") {
+            const groomAccount = document.querySelector(".groom-account"); 
+            if (groomAccount) {
+                groomAccount.style.display = "none"; // 요소 숨김
+            }
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const hideGroom = urlParams.get("hide");
+
+        if (hideGroom === "groom") {
+            document.querySelector(".groom-account-comment").classList.remove("hidden");
+        }
+    });
+
+    function sendWreath() {
+        window.location.href = 'https://smartstore.naver.com/fclick/products/3855450910';
+    }
+
+
+    </script>
+</body>
+
+</html>
