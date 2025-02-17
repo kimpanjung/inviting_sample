@@ -287,17 +287,15 @@
 
             <p class="mt-4 text-gray-600 groom-account">
                 예금주 고도윤(신랑)
-                <span class="font-semibold text-gray-1000 cursor-pointer hover:text-blue-500"
-                    onclick="copyAccountNumber('1002-846-891184'); sendCopyEvent('신랑측', '우리은행 1002-846-891184')">
+                <span class="font-semibold text-gray-1000 cursor-pointer hover:text-blue-500">
                     우리은행 1002-858-791224
                 </span>
             </p>
 
 
             <p class="mt-3 text-gray-600">
-                예금주 장은하 (신부))
-                <span class="font-semibold cursor-pointer hover:text-purple-500"
-                    onclick="copyAccountNumber('981-02-320474'); sendCopyEvent('신부측', '농협 981-02-320474')">
+                예금주 장은하 (신부)
+                <span class="font-semibold cursor-pointer hover:text-purple-500">
                     농협 126-02-326477
                 </span>
             </p>
@@ -377,7 +375,7 @@
             gtag('event', 'copy_account', {
                 'event_category': 'Account Copy',
                 'event_label': owner, // 예: 신랑측
-                'value': account // 예: 우리은행 1002-846-891184
+                'value': account 
             });
             console.log(`복사 이벤트 트래킹: ${owner} - ${account}`);
         }
